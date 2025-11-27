@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://backendangarita.duckdns.org'
+  apiUrl: 'https://backendangarita.duckdns.org/api'
 }
