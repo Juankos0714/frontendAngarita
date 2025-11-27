@@ -4,12 +4,13 @@ import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
 import { LoginRequest, RegisterRequest, AuthResponse, UserDecoded } from '../models/auth.models';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
-  private apiUrl = 'http://localhost:3005/api/auth'
+  private apiUrl = `${environment.apiUrl}/auth`; 
 
   private currentUserSubject = new BehaviorSubject<UserDecoded | null>(this.getUserFromStorage());
   public currentUser$ = this.currentUserSubject.asObservable();

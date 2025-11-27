@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { ProductService } from '../../services/product';
+import { ProductService } from '../../services/ProductService';
 import { Product } from '../../models/product.model';
 
 @Component({
